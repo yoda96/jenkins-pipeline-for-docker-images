@@ -5,7 +5,10 @@ node(){
     stage("CheckOut"){
         checkout scm
     }
-   
+	
+    stage("Install ps"){
+	     apt-get update && apt-get install -y procps
+    }
   
     
    // stage("Run clair-db"){
