@@ -9,7 +9,7 @@ node(){
   
     
     stage("Run clair-db"){
-        sh "docker run -p 5433:5433 -d --name db4 arminc/clair-db:2017-10-17"
+        sh "docker run -p 5433:5433 -d --name db5 arminc/clair-db:2017-10-17"
     }
 
     stage("Run postgres"){
