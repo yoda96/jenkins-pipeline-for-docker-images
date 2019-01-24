@@ -8,13 +8,13 @@ node(){
    
   
     
-   // stage("Run clair-db"){
-    //    sh "docker run -p 5432:5432 -d --name db arminc/clair-db:2017-10-17"
-  //  }
+    stage("Run clair-db"){
+        sh "docker run -p 5433:5433 -d --name db4 arminc/clair-db:2017-10-17"
+    }
 
-   // stage("Run postgres"){
-  //      sh "docker run -p 6060:6060 --link db:postgres -d --name clair arminc/clair-local-scan:v2.0.1"
-//    }
+    stage("Run postgres"){
+        sh "docker run -p 6061:6061 --link db:postgres -d --name clair4 arminc/clair-local-scan:v2.0.1"
+    }
 	
    // stage("Pull Docker Image"){
      //   sh "docker pull benhall/elasticsearch:1.4.2"
