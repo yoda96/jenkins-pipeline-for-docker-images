@@ -13,7 +13,7 @@ node(){
     }
 
     stage("Run postgres"){
-        sh "docker run -p 6061:6061 --link db:postgres -d --name clair4 arminc/clair-local-scan:v2.0.1"
+        sh "docker run -p 6061:6061 --link db:postgres -d --name clair5 arminc/clair-local-scan:v2.0.1"
     }
 	
    // stage("Pull Docker Image"){
