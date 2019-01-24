@@ -16,9 +16,9 @@ node(){
   //      sh "docker run -p 6060:6060 --link db:postgres -d --name clair arminc/clair-local-scan:v2.0.1"
 //    }
 	
-    stage("Pull Docker Image"){
-        sh "docker pull benhall/elasticsearch:1.4.2"
-    }
+   // stage("Pull Docker Image"){
+     //   sh "docker pull benhall/elasticsearch:1.4.2"
+   // }
 
     stage("Docker Image Vulnerability Analysis"){
         sh "clair-scanner_linux_amd64 --ip 172.17.0.1 -r report.json  benhall/elasticsearch:1.4.2"
